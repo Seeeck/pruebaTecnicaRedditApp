@@ -106,11 +106,12 @@ const styles = StyleSheet.create({
         fontSize: 18
     },
     description: {
-
+       
         fontSize: 18,
         textAlign: "center"
     },
     buttonView: {
+        marginTop:15,
         height: "10%",
         justifyContent: "flex-end"
     },
@@ -124,7 +125,8 @@ const styles = StyleSheet.create({
         paddingLeft: 45,
         paddingRight: 45,
         paddingTop: 5,
-        paddingBottom: 5
+        paddingBottom: 5,
+        
     },
     textButton: {
         color: 'white',
