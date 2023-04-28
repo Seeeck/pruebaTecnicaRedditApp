@@ -31,7 +31,7 @@ function BasicSwiper(props: Props) {
         }
     };
 
-    return (<Swiper ref={swiperRef}
+    return (<Swiper dotColor="#F59191" activeDotColor="#FC4545" ref={swiperRef}
 
         showsButtons={false}
         scrollEnabled={false}

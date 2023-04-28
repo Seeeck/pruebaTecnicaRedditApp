@@ -2,12 +2,12 @@
 
 
 import React, { useEffect } from "react";
-import { View, ImageBackground, StyleSheet, Image, ActivityIndicator } from "react-native"
+import { View, ImageBackground, StyleSheet, Image, ActivityIndicator, SafeAreaView } from "react-native"
 import { StatusBar } from "react-native";
 import { ScreensProps } from "../../types/types";
 
 function SplashScreen({ navigation }: ScreensProps) {
-    
+
     StatusBar.setHidden(true, 'none');
 
     useEffect(() => {
@@ -18,15 +18,17 @@ function SplashScreen({ navigation }: ScreensProps) {
     }, [])
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
+
             <ImageBackground source={require("../../../assets/img/splash_background.jpg")} resizeMode="cover" style={styles.image}>
                 <Image
                     source={require("../../../assets/img/reddit_logo.png")}
                     style={styles.logoImage}
                 />
-                <ActivityIndicator color={"gray"}/>
+                <ActivityIndicator color={"gray"} />
             </ImageBackground>
-        </View>
+
+        </SafeAreaView>
     )
 }
 
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
     logoImage: {
         justifyContent: "center",
         width: 250,
-        height:200,
+        height: 200,
         resizeMode: 'contain',
     },
 })

@@ -2,11 +2,11 @@
 
 
 
-import { StatusBar, Linking } from "react-native";
+import { StatusBar, Linking, SafeAreaView, StyleSheet } from "react-native";
 import BasicSwiper from "../../components/BasicSwiper";
-import { RootStackParamList, SwipeView } from "../../types/types";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { request, PERMISSIONS,  requestNotifications } from 'react-native-permissions';
+import { SwipeView } from "../../types/types";
+
+import { request, PERMISSIONS, requestNotifications } from 'react-native-permissions';
 import { ScreensProps } from "../../types/types";
 
 
@@ -23,7 +23,7 @@ function PermissionsScreen({ navigation }: ScreensProps) {
             permission: async () => {
                 try {
                     const result = await request(PERMISSIONS.ANDROID.CAMERA);
-                    
+
                     if (result === 'granted') {
                         return true;
                     } else {
@@ -86,15 +86,21 @@ function PermissionsScreen({ navigation }: ScreensProps) {
     ];
 
     return (
-        <BasicSwiper
-            swiperDataViews={swiperDataViews}
-            navigation={navigation}
-            endScreen={"HomeScreen"}
-        />
+        <SafeAreaView style={styles.container}>
+            <BasicSwiper
+                swiperDataViews={swiperDataViews}
+                navigation={navigation}
+                endScreen={"HomeScreen"}
+            />
+        </SafeAreaView>
     );
 
 }
 
-
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+})
 
 export default PermissionsScreen;
