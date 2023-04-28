@@ -2,6 +2,8 @@
 
 Esta es una aplicación de React Native que permite al usuario buscar, filtrar y ver publicaciones de Reddit. La aplicación utiliza la API de Reddit para obtener datos en tiempo real.
 
+##Probar búsqueda con palabra 'Chile' (la api con el filtro no permite algunas búsquedas)
+
 ## Instalación
 
 Antes de comenzar, asegúrate de tener configurado el entorno de desarrollo de React Native. Si necesitas ayuda con esto, puedes seguir la documentación oficial.
