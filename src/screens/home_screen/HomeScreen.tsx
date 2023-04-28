@@ -54,7 +54,7 @@ function HomeScreen({ navigation }: ScreensProps) {
 
         }
     }
-
+    //La carga de memes llega hasta cierto punto debido a los filtros
     async function loadMoreMemes() {
         try {
             setIsLoading(true);
@@ -65,6 +65,7 @@ function HomeScreen({ navigation }: ScreensProps) {
             } else {
                 data = await getMemes({ nextPage: nextPage });
             }
+            console.log(data.nextPage)
             setIsLoading(false)
             setNextPage(data.nextPage)
             setDataMemes([...dataMemes, ...data.childrenSerialised]);
