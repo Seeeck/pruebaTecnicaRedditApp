@@ -4,6 +4,8 @@ Esta es una aplicación de React Native que permite al usuario buscar, filtrar y
 
 ## Probar búsqueda con palabra 'Chile' (la api con los filtros solicitados limita algunas busquedas)
 
+## Las notificaciones se activan por defecto
+
 ## Instalación
 
 Antes de comenzar, asegúrate de tener configurado el entorno de desarrollo de React Native. Si necesitas ayuda con esto, puedes seguir la documentación oficial.
